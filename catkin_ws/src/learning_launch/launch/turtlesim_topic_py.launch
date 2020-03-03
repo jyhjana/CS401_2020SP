@@ -1,0 +1,8 @@
+<launch>
+   <node pkg="learning_topic" type="velocity_publisher.py" name="publisher" output="screen" />
+    <node pkg="learning_topic" type="pose_subscriber.py" name="subscriber" output="screen" />
+    <node pkg="turtlesim" type="turtlesim_node" name="turtle_1" output="screen" />
+</launch>
+
+
+

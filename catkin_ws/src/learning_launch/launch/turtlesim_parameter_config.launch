@@ -1,0 +1,11 @@
+<launch>
+    <param name="/number"   value="3"/>
+    <node pkg="learning_launch" type="velocity_publisher.py" name="publisher" output="screen" >
+            <param name="publish_frequency" type="double" value="10.0" />
+            <rosparam file="$(find learning_launch)/config/param.yaml" command="load"/>
+    </node>
+    <node pkg="learning_launch" type="pose_subscriber.py" name="subscriber" output="screen" />
+    <node pkg="turtlesim" type="turtlesim_node" name="turtle1" output="screen"  />
+</launch>
+
+
